@@ -4,7 +4,17 @@ Expose a local [`rmcp`](https://crates.io/crates/rmcp) MCP server to **Claude.ai
 
 A reusable building block for local-first MCPs on macOS — extracted from [`zotero-connector`](https://github.com/richardjlyon/zotero-connector) and shared with [`things-mcp`](https://github.com/richardjlyon/things-mcp) and any future MCP that needs to be reachable from Claude.ai's web sandbox.
 
-**Status:** scaffolding (v0.1.0 not yet published). Module surface and design are tracked in `docs/superpowers/specs/`.
+**Status: paused 2026-05-21 — pivoted to off-the-shelf gateway.**
+
+A survey of existing MCP gateway/proxy projects (see commit history) found that [`sparfenyuk/mcp-proxy`](https://github.com/sparfenyuk/mcp-proxy) (Python, 2.5k stars, actively maintained) already aggregates N stdio MCP backends behind one HTTP endpoint with static-bearer auth — exactly the gateway pattern this library was meant to enable. For a personal macOS setup behind Tailscale Funnel, that's strictly simpler than a Rust library + per-consumer wiring across N MCPs. Worth no maintenance burden.
+
+This repo is left in place as a marker — the design at `docs/superpowers/specs/2026-05-21-mcp-cowork-bridge-design.md` is still a valid blueprint if the future-state changes (Anthropic's hosted MCP doesn't ship, OAuth 2.1 becomes mandatory and the Python proxy lacks it, or a 5th+ MCP arrives and the gateway-of-gateways pattern wins). Reach for it then.
+
+---
+
+(Original v0.1.0 design notes follow.)
+
+**Status:** scaffolding (v0.1.0 never published). Module surface and design are tracked in `docs/superpowers/specs/`.
 
 ## What this crate does
 
