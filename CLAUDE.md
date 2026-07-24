@@ -29,3 +29,7 @@ Consumers today: `zotero-connector` (`zotero-mcp` crate), `things-mcp` (post-Pla
 
 - `zotero-connector` (`/Users/rjl/Code/mcp-zotero`) — source of the original inline implementation. Extraction proceeds by mining its `crates/zotero-mcp/src/{http_transport,oauth,bearer,setup,state}.rs`.
 - `things-mcp-server` (`/Users/rjl/Code/mcp-things`) — the second consumer. Plan 8 there will depend on this crate.
+
+## Project knowledge
+
+Project knowledge (history, decisions, status) lives in the owner's private knowledge base — sessions with access should read the project note there before non-trivial changes. This file carries only how-to-work-here rules.
